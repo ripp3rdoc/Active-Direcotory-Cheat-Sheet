@@ -1,13 +1,15 @@
 # Active-Direcotory-Cheat-Sheet
 Active Direcotory Red Teaming and Penetration Testing Cheat Sheet
 
-[User and Group Enumeration](../User and Group Enumeration.md)Antivirus & Detections.md
-
-[]()Network Enumeration.md
-
-[]()Password Hunting.md
+[User and Group Enumeration](User%20and%20Group%20Enumeration.md)
 
 
-[]()User and Group Enumeration.md
+[Network Enumeration](Network%20Enumeration.md)
 
-[]()Version and Configurations.md 
+[Password Hunting](Password%20Hunting.md)
+
+
+[Version and Configurations](Version%20and%20Configurations.md)
+
+[Antivirus & Detections](Antivirus%20&%20Detections.md)
+
