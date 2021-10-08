@@ -1,4 +1,4 @@
-# Antivirus & Detections
+# Antivirus & Detection
 ### Windows Defender
 - check status of Defender
 
