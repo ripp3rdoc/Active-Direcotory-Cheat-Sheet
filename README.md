@@ -7,9 +7,9 @@ Active Direcotory Red Teaming and Penetration Testing Cheat Sheet
 
 - [Password Hunting](Password%20Hunting.md)
 
-- [Version and Configurations](Version%20and%20Configurations.md)
+- [Version and Configuration](Version%20and%20Configuration.md)
 
-- [Antivirus & Detections](Antivirus%20&%20Detections.md)
+- [Antivirus & Detection](Antivirus%20&%20Detection.md)
 
 - [Domain User Enumeration](Domain-User-Enumeration.md)
 
