@@ -30,3 +30,12 @@ Get domain groups and members
 
 `Get-DomainGroup -Domain domain.local`
 
+Adding a user to a domain group
+
+`Add-DomainGroupMember -Identity 'GROUP1' -Member 'student1' -Domain 'marvel'`
+
+Check the users current state
+
+`net user student1 /domain`
+
+ 
