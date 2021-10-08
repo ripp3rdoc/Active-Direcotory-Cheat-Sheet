@@ -12,3 +12,5 @@ PS C:\AD> Invoke-BloodHound -CollectionMethod All -Verbose -Domain marvel
 ```
 
 After the script finishes open up the bloodhound.exe and upload the zip file to the program.
+
+> A good [tutorial](https://youtu.be/_Mo9RjCMYLU) on BloodHound 
