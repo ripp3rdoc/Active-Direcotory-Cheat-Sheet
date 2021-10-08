@@ -6,6 +6,8 @@
 
 ## ACL - GenericWrite on User
 
+## PrintNightmare (CVE-2021-34527)
+
 ## DNS Admins 
 
 ## DCSync
