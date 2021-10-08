@@ -11,6 +11,14 @@ Active Direcotory Red Teaming and Penetration Testing Cheat Sheet
 
 - [Antivirus & Detections](Antivirus%20&%20Detections.md)
 
-- []()
+- [Domain User Enumeration](Domain-User-Enumeration.md)
+
+- [Domain Group Enumeration]( Domain-Group-Enumeration.md )
+
+- [ Domain Computers Enumeration]( Domain-Computers-Enumeration.md )
+
+- [ Domain Shares Enumeration ]( Domain-Shares-Enumeration.md )
+
+- [ GPO and OU Enumeration ]( GPO-and-OU-Enumeration.md )
 
 - []()
