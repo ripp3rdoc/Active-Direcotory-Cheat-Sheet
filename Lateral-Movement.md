@@ -92,4 +92,4 @@ Create a session variable and disable defences:
   
   Invoke-Command -ScriptBlock{netsh advfirewall set allprofiles state off} -session $sess
   
-  ```
+  ``` 
