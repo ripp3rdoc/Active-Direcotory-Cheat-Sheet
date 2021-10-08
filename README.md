@@ -26,3 +26,5 @@ Active Direcotory Red Teaming and Penetration Testing Cheat Sheet
 - [AD Reconnaissance Automation]( AD-Reconnaissance.md )
 
 - [Bloodhound](Bloodhound.md)
+
+- [Lateral Movement](Lateral-Movement.md)
