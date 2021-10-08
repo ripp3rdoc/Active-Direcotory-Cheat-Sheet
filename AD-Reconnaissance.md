@@ -8,5 +8,5 @@ Import the script
 
 PS C:\AD> powershell -ep bypass 
 
-PS C:\AD> .\ADrecon.ps1 -OutputDir ALL-ADRecon -OutputType HTML
+PS C:\AD> .\ADRecon.ps1 -OutputDir ALL-ADRecon -OutputType HTML
 ```
