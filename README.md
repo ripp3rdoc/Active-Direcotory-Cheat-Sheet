@@ -28,3 +28,5 @@ Active Direcotory Red Teaming and Penetration Testing Cheat Sheet
 - [Bloodhound](Bloodhound.md)
 
 - [Lateral Movement](Lateral-Movement.md)
+
+- [Domain Privilege Escalation](Domain-Privilege-Escalation.md)
