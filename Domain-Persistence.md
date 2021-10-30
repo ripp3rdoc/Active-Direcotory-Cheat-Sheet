@@ -1,6 +1,6 @@
 # Domain Persistence and Dominance
 
-## DSRM
+## Directory Service Restore Mode (DSRM)
 
 ## DCShadow Change Attribute
 
