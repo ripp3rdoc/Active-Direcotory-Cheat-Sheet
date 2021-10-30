@@ -30,3 +30,5 @@ Active Direcotory Red Teaming and Penetration Testing Cheat Sheet
 - [Lateral Movement](Lateral-Movement.md)
 
 - [Domain Privilege Escalation](Domain-Privilege-Escalation.md)
+
+- [Domain Persistence and Dominance](Domain-Persistence.md)
