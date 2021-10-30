@@ -19,7 +19,15 @@ Get-DomainGroup -SamAccountName DnsAdmins
 
 ## ACL - GenericWrite on User
 
+* [GenericWrite Exploit](https://zflemingg1.gitbook.io/undergrad-tutorials/active-directory-acl-abuse/genericwrite-exploit)
+* [Abusing Active Directory ACLs/ACEs](https://book.hacktricks.xyz/windows/active-directory-methodology/acl-persistence-abuse)
+
+
 ## PrintNightmare (CVE-2021-34527)
+
+* [Explaining and Exploiting PrintNightmare](https://youtu.be/zL2BXW0giBc)
+* [Playing with PrintNightmare](https://0xdf.gitlab.io/2021/07/08/playing-with-printnightmare.html)
+
 
 ## PrivEsc - DNS Admins 
 
