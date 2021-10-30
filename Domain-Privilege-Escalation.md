@@ -75,4 +75,4 @@ Rubeus.exe s4u /ticket:doIFCDC[...]TE9DQUw= /impersonateuser:administrator /doma
 ## ASPRoasting
 
 * [Harmjoy's Roasting AS-REPs Tutorial](http://www.harmj0y.net/blog/activedirectory/roasting-as-reps/)
-* [CRACKING ACTIVE DIRECTORY PASSWORDS WITH AS-REP ROASTING](CRACKING ACTIVE DIRECTORY PASSWORDS WITH AS-REP ROASTING)
+* [CRACKING ACTIVE DIRECTORY PASSWORDS WITH AS-REP ROASTING](https://stealthbits.com/blog/cracking-active-directory-passwords-with-as-rep-roasting/)
