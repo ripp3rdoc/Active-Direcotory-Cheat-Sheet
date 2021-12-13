@@ -32,3 +32,5 @@ Active Direcotory Red Teaming and Penetration Testing Cheat Sheet
 - [Domain Privilege Escalation](Domain-Privilege-Escalation.md)
 
 - [Domain Persistence and Dominance](Domain-Persistence.md)
+
+- [Useful Websites & Blogs](Useful-Web-and-Blogs.md)
