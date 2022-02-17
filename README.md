@@ -35,4 +35,4 @@ Active Direcotory Red Teaming and Penetration Testing Cheat Sheet.
 
 - [Useful Websites & Blogs](Useful-Web-and-Blogs.md) 
 
-- [Privilege Requirements for Every Attack](riv_Requirements.md)
+- [Privilege Requirements for Every Attack](Priv_Requirements.md)
