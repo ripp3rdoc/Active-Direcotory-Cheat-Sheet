@@ -34,3 +34,5 @@ Active Direcotory Red Teaming and Penetration Testing Cheat Sheet.
 - [Domain Persistence and Dominance](Domain-Persistence.md)
 
 - [Useful Websites & Blogs](Useful-Web-and-Blogs.md) 
+
+- [Privilege Requirements for Every Attack](riv_Requirements.md)
