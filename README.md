@@ -1,5 +1,5 @@
 # Active-Direcotory-Cheat-Sheet
-Active Direcotory Red Teaming and Penetration Testing Cheat Sheet
+Active Direcotory Red Teaming and Penetration Testing Cheat Sheet.
 
 - [Local User and Group Enumeration](User%20and%20Group%20Enumeration.md)
 
@@ -33,4 +33,4 @@ Active Direcotory Red Teaming and Penetration Testing Cheat Sheet
 
 - [Domain Persistence and Dominance](Domain-Persistence.md)
 
-- [Useful Websites & Blogs](Useful-Web-and-Blogs.md)
+- [Useful Websites & Blogs](Useful-Web-and-Blogs.md) 
