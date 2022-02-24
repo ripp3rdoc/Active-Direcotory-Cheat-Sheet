@@ -1,8 +1,9 @@
 # Attacking Kerberos 
 
 ## Enumeration w/ Kerbrute
+> Use  --downgrade to get a crackable format for hashcat
 ```shell
-./kerbrute userenum --dc CONTROLLER.local -d CONTROLLER.local User.txt
+./kerbrute userenum --dc CONTROLLER.local -d CONTROLLER.local User.txt --downgrade
 ```
 
 ## Harvesting Tickets w/ Rubeus
